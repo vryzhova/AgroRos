@@ -1,1 +1,31 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
+.button {
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
+
+.big {
+  width: 185px;
+  height: 40px;
+}
+
+.light {
+  background-color: #FFBD00;
+}
+
+.dark {
+  background-color: #E15601;
+}
+
+.middle {
+  width: 160px;
+  height: 40px;
+}
+
+.little {
+  width: 126px;
+  height: 40px;
+}
+/*# sourceMappingURL=style.css.map */

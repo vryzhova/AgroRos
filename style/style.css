@@ -3,7 +3,7 @@
   border-radius: 3px;
   border: none;
   color: white;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .big {
@@ -28,4 +28,24 @@
   width: 126px;
   height: 40px;
 }
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-rows: max-content max-content max-content max-content max-content;
+  background: rgba(239, 249, 240, 0.5);
+}
+.footer .footer_part1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer .footer_part2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.footer .footer_part4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 /*# sourceMappingURL=style.css.map */

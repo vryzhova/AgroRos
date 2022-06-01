@@ -31,3 +31,31 @@
 }
 
 //**********************end buttons*********
+
+//********************** Footer *********
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: max-content max-content max-content max-content max-content;
+    background: rgba(239, 249, 240, 0.5);
+
+    .footer_part1{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    };
+
+    .footer_part2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    };
+
+    .footer_part4{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    };
+
+
+}
+
+//********************** End Footer *********

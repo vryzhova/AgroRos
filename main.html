@@ -10,6 +10,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/dop.css">
 </head>
 
 <body>
@@ -23,40 +24,49 @@
                     <a>Популярные продукты</a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col  mb-2 text-left">
-                    <a>Моментальная карта</a>
-                </div>
-                <div class="col  mb-2 text-left">
-                    <a>Ипотека от 4,7 %</a>
-                </div>
-                <div class="col  mb-2 text-left">
-                    <a>Вклад “Премиальный”</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3 text-left ">
-                    <div class="d-block pl-3 border round ">
-                        <div>Бесплатный выпуск </br>и обслуживание </br>3 % на остаток по
-                            карте </br>CashBack до 1%</div>
-                        <button>Подробнее</button>
-                        <div class="col-2 p-5 "><img src="assets\mainPage\momentCard.svg"> </div>
+            <div class="container" id="nav-scroller">
+
+                <div class="row">
+
+                    <div class="col  mb-2 text-left" id="nav-scroller__item">
+                        <a>Моментальная карта</a>
+                    </div>
+                    <div class="col  mb-2 text-left">
+                        <a>Ипотека от 4,7 %</a>
+                    </div>
+                    <div class="col  mb-2 text-left">
+                        <a>Вклад “Премиальный”</a>
                     </div>
                 </div>
-                <div class="col-3 text-left ">
-                    <div class="d-block ml-3 border round ">
-                        <div>Бесплатный выпуск </br>и обслуживание </br>3 % на остаток по
-                            карте </br>CashBack до 1%</div>
-                        <button>Подробнее</button>
-                        <div class="col-2 p-5 "><img src="assets\mainPage\momentCard.svg"> </div>
-                    </div>
-                </div>
-                <div class="col-3 text-left ">
-                    <div class="d-block border round ">
-                        <div>Бесплатный выпуск </br>и обслуживание </br>3 % на остаток по
-                            карте </br>CashBack до 1%</div>
-                        <button>Подробнее</button>
-                        <div class="col-2 p-5 "><img src="assets\mainPage\momentCard.svg"> </div>
+                <div class="row ">
+                    <div class="nav-scroller__items">
+
+                        <div class="col-3 text-left " id="nav-scroller__item">
+                            <div class="d-block pl-3 border round ">
+                                <div>Бесплатный выпуск </br>и обслуживание </br>3 % на остаток по
+                                    карте </br>CashBack до 1%</div>
+                                <button class="button middle light">Подробнее</button>
+                                <div class="col-2  "><img src="assets\mainPage\momentCard.svg"> </div>
+                            </div>
+                        </div>
+                        <div class="col-3 text-left" id="nav-scroller__item">
+                            <div class="d-block ml-3 border round ">
+                                <div>Квартира в готовом </br>или строящемся доме</br> Рассмотрение заявок</br>онлайн за
+                                    12
+                                    часов</br>Первоначальный взнос</br>от 10%
+                                </div>
+                                <button class="button little dark">Рассчитать</button>
+                                <div class=" col-2 "><img src=" assets\mainPage\houses.png"> </div>
+                            </div>
+                        </div>
+                        <div class="col-3 text-left" id="nav-scroller__item">
+                            <div class="d-block border round ">
+                                <div>Ставка от 3,9 %</br>Ежемесячные</br> выплаты</br>Минимальная сумма</br>пополнения
+                                </div>
+                                <button class="button middle dark">Оформить</button>
+                                <div class="col-2 "><img src="assets\mainPage\houses.png"> </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/normalize.css">
     <title>AgroRos</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
-    <header class="header"></header>
+    <header class="header">
+        <div class="general-mnu-bg">
+            <div class="general-mnu">
+                <ul class="header__links general-mnu__links">
+                    <li class="general-mnu__link"><a href="#">частным клиентам</a></li>
+                    <li class="general-mnu__link"><a href="#">бизнесу</a></li>
+                    <li class="general-mnu__link"><a href="#">недвижимость</a></li>
+                    <li class="general-mnu__link"><a href="#">Поиск</a></li>
+                </ul>
+                <div>
+                    <div class="general-mnu__location"></div>
+                    <a href="#" class="general-mnu__lng">
+                        EN
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mnu">
+            <div class="mnu__left">
+                <a href="/" class="logo"><img src="assets/header/лого.svg" alt=""></a>
+                <ul class="header__links mnu__links">
+                    <li class="mnu__link"><a href="#">карты</a></li>
+                    <li class="mnu__link"><a href="#">кредиты </a></li>
+                    <li class="mnu__link"><a href="#">вклады</a></li>
+                    <li class="mnu__link"><a href="#">Оплата</a></li>
+                    <li class="mnu__link"><a href="#">Услуги</a></li>
+                </ul>
+            </div>
+            <div class="mnu__right">
+                <div class="header__tel-info">
+                    <div class="header__tel">8 800 222 44 19</div>
+                    <div class="header__connect">Свяжитесь с нами</div>
+                </div>
+                <a href="/"><button type="button" class="button big light btn-txt-red">ONLINE-BANK</button></a>
+            </div>
+        </div>
+    </header>
     <section class="main-view"></section>
     <section class="currency"></section>
     <section class="products"></section>
@@ -28,4 +67,5 @@
 
     <script src="/scripts/index.js"></script>
 </body>
+
 </html>

@@ -95,6 +95,11 @@ img {
   display: flex;
 }
 
+.general-mnu__right {
+  display: flex;
+  align-items: center;
+}
+
 
 .general-mnu__lng {
   font-family: 'Nunito';
@@ -112,11 +117,23 @@ img {
   color: #381602;
 }
 
+.general-mnu__location {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.loc {
+  display: inline-block;
+  padding: 0 20px;
+}
+
 .mnu {
   height: 79px;
   padding-bottom: 11px;
   display: flex;
   justify-content: space-between;
+  background-color: aquamarine;
 
 }
 
@@ -137,6 +154,7 @@ img {
 
 .logo {
   max-width: 250px;
+
 }
 
 .header__tel-info {

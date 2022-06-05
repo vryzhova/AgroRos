@@ -125,12 +125,12 @@ img {
 
 .loc {
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 11px;
 }
 
 .mnu {
   height: 79px;
-  padding-bottom: 11px;
+  /*padding-bottom: 11px;*/
   display: flex;
   justify-content: space-between;
   background-color: aquamarine;
@@ -166,9 +166,10 @@ img {
 
 .header__tel {
   color: #4E8A6B;
+  text-transform: capitalize;
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 11px;
+  margin-bottom: 5px;
 
 }
 

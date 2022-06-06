@@ -110,7 +110,7 @@
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .footer {
@@ -139,11 +139,14 @@ body {
 }
 
 .footer .footer_part2 {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   margin-top: 48px;
   margin-bottom: 48px;
 }
+
 .footer .footer_part3 {
   font-weight: 600;
   font-size: 10px;
@@ -155,18 +158,24 @@ body {
 .footer .footer_part4 {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 97px;
   font-size: 12px;
 }
+
 .footer .footer_part5 {
+  display: -ms-grid;
   display: grid;
-  justify-content: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   font-weight: 600;
   font-size: 12px;
   line-height: 11px;
   color: #807C7C;
 }
+
 .footer input {
   width: 318px;
   height: 47px;
@@ -174,6 +183,37 @@ body {
   border-radius: 3px;
   border: none;
 }
+
+.footer .text-find::-webkit-input-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 11px;
+  letter-spacing: 0.035em;
+  text-transform: capitalize;
+  color: #E15601;
+  padding-left: 5px;
+}
+
+.footer .text-find:-ms-input-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 11px;
+  letter-spacing: 0.035em;
+  text-transform: capitalize;
+  color: #E15601;
+  padding-left: 5px;
+}
+
+.footer .text-find::-ms-input-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 11px;
+  letter-spacing: 0.035em;
+  text-transform: capitalize;
+  color: #E15601;
+  padding-left: 5px;
+}
+
 .footer .text-find::placeholder {
   font-weight: 600;
   font-size: 15px;
@@ -183,16 +223,21 @@ body {
   color: #E15601;
   padding-left: 5px;
 }
+
 .footer a {
   text-decoration: none;
   color: #373535;
 }
+
 .footer .footer-footer_part1__big {
   text-transform: uppercase;
 }
+
 .footer .footer_part1__link {
+  display: -ms-grid;
   display: grid;
 }
+
 .footer .footer_part1__tel {
   font-weight: 700;
   font-size: 29px;
@@ -200,18 +245,21 @@ body {
   text-transform: capitalize;
   color: #4E8A6B;
 }
+
 .footer .footer_part1__textfortel {
   font-weight: 600;
   font-size: 12px;
   line-height: 11px;
   color: #807C7C;
 }
+
 .footer .social-network__link {
-  justify-self: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
   padding-right: 135px;
 }
+
 .footer .social-network__img {
   padding-left: 45px;
-
 }
 /*# sourceMappingURL=style.css.map */

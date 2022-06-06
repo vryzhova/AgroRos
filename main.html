@@ -7,70 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroRos</title>
     <link rel="stylesheet" href="./style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
     <header class="header"></header>
     <section class="main-view"></section>
-    <section class="currency">
-        <div class="currency_content container" id="currency_content">
-                <div class="hidden">Курс для обмена</div>
-                <div>Валюта</div>
-                <div class="hidden" >Покупка</div>
-                <div class="hidden" >Продажа</div>
-                <div class="hidden" >ЦБ</div>
-                <div >Обмен</div>
-                <div class="hidden" ><input type="radio" name="pay" value="money"><span class="p-1">Наличные</span></div>
-                <div class="currency_content_items"> 
-                    <div class="currency_content_items_img"><img src="/assets/currency/eur.png"></div>
-                    <div class="currency_content_item">1 EUR</div>
-                </div>
-                <div class="hidden" ><span>80,26 ₽</span></div>
-                <div class="hidden"  >71,22 ₽</div>
-                <div class="euro hidden"></div>
-                <div class="currency_content_exchange"><input class="exchange_input" id="exchange_input" type="text">
-                    <select id="select_input-valute" class="select_valute">
-                        <option value="RUB">₽</option>
-                        <option value="USD">$</option>
-                        <option value="EUR">€</option>
-                        <option value="CNY">¥</option>
-                    </select>
-                </div>
-            
-            
-                <div class="hidden" ><input type="radio" name="pay" value="card"><span class="p-1">Банковская карта</span></div>
-                <div class=" currency_content_items"> 
-                    <div class="currency_content_items_img"><img src="/assets/currency/us.png"></div>
-                    <div class="currency_content_item">1 USD</div>
-                </div>
-                <div class="hidden" ><span>80,26 ₽</span></div>
-                <div class="hidden" >71,22 ₽</div>
-                <div class="usd hidden"></div>
-                <div class="currency_content_exchange"><div class="exchange_output" id="exchange_output"></div>
-                    <select class="select_valute" id="select_output-valute">
-                        <option value="RUB">₽</option>
-                        <option value="USD">$</option>
-                        <option value="EUR">€</option>
-                        <option value="CNY">¥</option>
-                    </select></div>
-        
-        
-                <div class="hidden" ><input type="radio" name="pay" value="online"><span class="p-1">Онлайн-банк</span></div>
-                <div class=" currency_content_items"> 
-                    <div class="currency_content_items_img"><img src="/assets/currency/cny.png"></div>
-                    <div class="currency_content_item">1 CNY</div>
-                </div>
-                <div class="hidden" ><span>10,16 ₽</span></div>
-                <div class="hidden" >11,22 ₽</div>
-                <div class="cny hidden"></div>
-                <div><button type="button" class="button big  light" id="exchangeBtn" >Купить валюту</button></div>
-        </div>
-        <div class="currency_content-mobile">
-
-        </div>
-    </section>
-    
+    <section class="currency"></section>
     <section class="products"></section>
     <section class="credits"></section>
     <section class="loancalc"></section>
@@ -90,33 +32,33 @@
 
     <footer class="footer">
         <div class="footer_part1">
-            <div class="footer_part1__link">
-                <p><b>БАНК</b></p>
+            <div>
+                <p>БАНК</p>
                 <a href="">О банке</a> <br>
                 <a href="">Руководство</a> <br>
                 <a href="">Клиенты и Партнеры</a> <br>
                 <a href="">Акционерам и Инвесторам</a> <br>
             </div>
 
-            <div class="footer_part1__link">
-                <p><b>ИНФОРМАЦИЯ</b></p>
+            <div>
+                <p>ИНФОРМАЦИЯ</p>
                 <a href="">Лицензии</a> <br>
                 <a href="">Реквизиты</a> <br>
                 <a href="">Финансовые показатели</a> <br>
                 <a href="">Раскрываемая информация</a> <br>
             </div>
 
-            <div class="footer_part1__link">
-                <p><a href=""><b>ПРЕСС-ЦЕНТР</b></a></p>
-                <p><a href=""><b>КОНТАКТЫ</b></a></p>
-                <p><a href=""><b>КАРЬЕРА</b></a></p>
-                <p><a href=""><b>ПОМОЩЬ</b></a></p>
+            <div>
+                <p>ПРЕСС_ЦЕНТР</p>
+                <p>КОНТАКТЫ</p>
+                <p>КАРЬЕРА</p>
+                <p>ПОМОЩЬ</p>
             </div>
 
-            <div class="footer_part1__link">
+            <div>
                 <div>
-                    <p class="footer_part1__textfortel">Бесплатно по России</p>
-                    <p class="footer_part1__tel">8 800 222 44 19</p>
+                    <p>Бесплатно по России</p>
+                    <p>8 800 222 44 19</p>
                 </div>
 
                 <div>
@@ -129,26 +71,26 @@
 
         <div class="footer_part2">
             <div>
-                <input class="text-find" type="text" placeholder="Поиск" id="text-find">
+                <input type="text" value="Поиск">
             </div>
 
-            <div class="social-network__link">
-                <a href="">
+            <div>
+                <a class="social-network__link" href="">
                     <img class="social-network__img social-network__telegram" src="/assets/footer/telegram.png"
                         alt="telegram">
                 </a>
 
-                <a href="">
+                <a class="social-network__link" href="">
                     <img class="social-network__img social-network__facebook" src="/assets/footer/facebook.png"
                         alt="facebook">
                 </a>
 
-                <a href="">
+                <a class="social-network__link" href="">
                     <img class="social-network__img social-network__instagram" src="/assets/footer/inst.png"
                         alt="instagram">
                 </a>
 
-                <a href="">
+                <a class="social-network__link" href="">
                     <img class="social-network__img social-network__vkontakte" src="/assets/footer/vk.png"
                         alt="vkontakte">
                 </a>
@@ -190,7 +132,7 @@
 
     <!-- footer end -->
 
-    <script src="/scripts/index.js" type="module"></script>
+    <script src="/scripts/index.js"></script>
 </body>
 
 </html>

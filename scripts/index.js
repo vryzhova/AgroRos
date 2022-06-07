@@ -1,13 +1,5 @@
-/*const succesCallback = (position) => {
-    console.log(position);
-};
+import  './currency.js';
 
-const errorCallback = (error) => {
-    console.error(error);
-};
-
-navigator.geolocation.getCurrentPosition(succesCallback, errorCallback);
-*/
 const errorCallback = (error) => {
     console.error(error);
 };
@@ -34,3 +26,6 @@ function succesCallback(position){
     .catch(error => console.log(error));
     
 }
+
+
+

@@ -1,18 +1,33 @@
 import  './currency.js';
+localStorage.clear(); //для проверки подтягивания города
 
-const errorCallback = (error) => {
+document.addEventListener("DOMContentLoaded", function(event) {
+    let data = localStorage.getItem("city");
+    console.log(data);
+
+    if(data) { // если в сторадже что-то есть
+        document.getElementById("city").innerText = data;
+    } 
+    else {
+    // присвоим дефолтное значение и сохраним
+    save(data = {});
+}});
+
+//сохранение в localStorage города
+function save() {
+    const errorCallback = (error) => {
     console.error(error);
-};
+    };
 
-if(navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(succesCallback, errorCallback);
-}
-else{
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(succesCallback, errorCallback);
+    }
+    else{
 
+    }
 }
 
 function succesCallback(position){
-    
     let {latitude, longitude} = position.coords;
     fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=cc019d61a64841b8b35813726e1693b2`)
     .then(response => response.json())
@@ -22,9 +37,10 @@ function succesCallback(position){
         //let {city} = allDetails; 
         let city = allDetails.city;
         document.getElementById("city").innerText = `${city}`;
+        localStorage.setItem('city', `${city}`);
     })
     .catch(error => console.log(error));
-    
+ 
 }
 
 

@@ -8,26 +8,273 @@
     border: none;
     color: white;
     font-family: 'Nunito', sans-serif;
-    
+
 }
 
 .big {
     width: 185px;
     height: 40px;
 }
+
 .light {
     background-color: #FFBD00;
 }
-.dark{
+
+.dark {
     background-color: #E15601;
 }
+
 .middle {
     width: 160px;
     height: 40px;
 }
+
 .little {
     width: 126px;
     height: 40px;
 }
 
 //**********************end buttons*********
+
+/**************** header ***************/
+.header {
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 11px;
+    font-family: 'Nunito', sans-serif;
+    color: #807C7C;
+}
+
+.header img {
+    max-width: 100%;
+}
+
+.header__links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.header__links li {
+    display: inline-block;
+}
+
+.header__links li a {
+    display: block;
+    text-decoration: none;
+    color: #807C7C;
+    transition: color .4s ease;
+}
+
+.header__links li a:hover {
+    color: #474545;
+}
+
+.header__links li a::first-letter {
+    text-transform: uppercase;
+}
+
+.general-mnu,
+.mnu {
+    margin: 0 auto;
+    max-width: 85%;
+}
+
+.general-mnu {
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.general-mnu-bg {
+    background-color: rgba(239, 249, 240, 0.5);
+}
+
+.general-mnu__link {
+    padding-right: 40px;
+}
+
+.general-mnu__links {
+    display: flex;
+}
+
+.general-mnu__right {
+    display: flex;
+    align-items: center;
+}
+
+.general-mnu__lng {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 11px;
+    text-transform: uppercase;
+    color: #E15601;
+    display: block;
+    text-decoration: none;
+}
+
+.general-mnu__lng:hover {
+    color: #381602;
+}
+
+.general-mnu__location {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.general-mnu__location-link {
+    display: flex;
+    padding: 0 11px;
+    text-decoration: none;
+    color: #807C7C;
+    align-items: center;
+}
+
+.header .city {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.mnu {
+    height: 79px;
+    /*padding-bottom: 11px;*/
+    display: flex;
+    justify-content: space-between;
+    /*background-color: aquamarine;*/
+
+}
+
+.mnu__left,
+.mnu__right {
+    display: flex;
+    align-items: center;
+}
+
+.mnu__links {
+    display: flex;
+
+}
+
+.mnu__link {
+    padding-right: 30px;
+}
+
+.header .logo {
+    max-width: 250px;
+    min-width: 150px;
+}
+
+.header__tel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 40px;
+    justify-content: center;
+
+}
+
+.header__tel {
+    color: #4E8A6B;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.header__tel-num {
+    margin: 0;
+}
+
+.header__connect {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+
+.btn-txt-red {
+    color: #E15601;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 13.5px;
+    letter-spacing: 1.5%;
+}
+
+.btn-txt-red:hover {
+    color: #FFF;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .general-mnu,
+    .mnu {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .mnu__link {
+        padding-right: 15px;
+    }
+
+    .header__tel-info {
+        margin-right: 10px;
+    }
+
+    .header__tel {
+
+        font-size: 20px;
+
+    }
+
+    .header .logo {
+        max-width: 250px;
+        min-width: 50px;
+    }
+
+    .big {
+        width: 160px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .general-mnu,
+    .mnu {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .mnu__link {
+        padding-right: 15px;
+    }
+
+    .header__tel-info {
+        margin-right: 10px;
+    }
+
+    .header__tel {
+
+        font-size: 20px;
+
+    }
+
+    .header .logo {
+        max-width: 250px;
+        min-width: 50px;
+    }
+
+    .big {
+        width: 160px;
+    }
+
+}
+
+
+
+/****************** header end **********/

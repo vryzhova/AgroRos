@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroRos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/dop.css">
@@ -18,13 +16,21 @@
     <section class="main-view"></section>
     <section class="currency"></section>
     <section class="products">
+
+    </section>
+    <section class="credits">
+    </section>
+    <section class="loancalc"></section>
+    <section class="service">
         <div class="container">
-            <p>Популярные продукты</p>
-            <div class="row nav-scroller">
-                <div class="nav-scroller__items">
-                    <div class="col nav-scroller__item">
-                        <p>Моментальная карта</p>
-                        <div class="border round ">
+            <div class="service_title">
+                <p id="txt1">Популярные продукты</p>
+            </div>
+            <div class="nav-scroller">
+                <div id="flexScroll">
+                    <div class="nav-scroller__item">
+                        <p id="titleMini">Моментальная карта</p>
+                        <div class="miniblock">
                             <p>Бесплатный выпуск </br>и обслуживание</p>
                             <p>3 % на остаток </br>по карте </p>
                             <p>CashBack до 1%</p>
@@ -32,24 +38,24 @@
                             <img id="img" src="assets\mainPage\momentCard.svg">
                         </div>
                     </div>
-                    <div class="col nav-scroller__item">
-                        <p>Ипотека от 4,7 %</p>
-                        <div class="border round ">
+                    <div class="nav-scroller__item">
+                        <p id="titleMini">Ипотека от 4,7 %</p>
+                        <div class="miniblock">
                             <p>Квартира в готовом </br>или строящемся доме</p>
                             <p>Рассмотрение заявок</br>онлайн за 12 часов</p>
                             <p>Первоначальный взнос</br>от 10%</p>
                             <button class="button little dark">Рассчитать</button>
-                            <img id="img" src=" assets\mainPage\houses.png">
+                            <img id="img1" src=" assets\mainPage\houses.png">
                         </div>
                     </div>
-                    <div class="col nav-scroller__item">
-                        <p>Вклад “Премиальный”</p>
-                        <div class="border round ">
+                    <div class="nav-scroller__item">
+                        <p id="titleMini">Вклад “Премиальный”</p>
+                        <div class="miniblock">
                             <p>Ставка от 3,9 %</p>
                             <p>Ежемесячные</br> выплаты</p>
                             <p>Минимальная сумма</br>пополнения</p>
                             <button class="button middle dark">Оформить</button>
-                            <img id="img" src=" assets\mainPage\houses.png">
+                            <img id="img1" src=" assets\mainPage\houses.png">
                         </div>
                     </div>
                 </div>
@@ -57,46 +63,8 @@
             </div>
         </div>
     </section>
-    <section class="credits">
+    <section class="entry">
     </section>
-    <section class="loancalc"></section>
-    <section class="service">
-        <div class="container">
-            <p>Бизнес-сервисы</p>
-            <div class="row">
-                <div class="col">
-                    <p>Зарплатные проекты</p>
-                    <div class="business">
-                        <p>Открытие проекта</p>
-                        <p>Выпуск карт</p>
-                        <p>Перечисление зарплаты</p>
-                        <p>Годовое обслуживание</p>
-
-                    </div>
-                </div>
-                <div class="col">
-                    <p>Бизнес</p>
-                    <div class="business">
-                        <p>Кредитование бизнеса</p>
-                        <p>Бух. сопровождение</p>
-                        <p>Банковские гарантии</p>
-                        <p>Автоинкасация</p>
-
-                    </div>
-                </div>
-                <div class="col">
-                    <p>Недвижимость</p>
-                    <div class="business">
-                        <p>Продажа недвижимости</p>
-                        <p>Аренда недвижимости</p>
-                        <p>Недвижимость для бизнеса</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="entry"></section>
     <section class="mobile-bank"></section>
     <section class="news"></section>
     <section class="buttons">
@@ -108,9 +76,6 @@
     <footer class="footer"></footer>
 
     <script src="/scripts/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
 </body>
 
 </html>

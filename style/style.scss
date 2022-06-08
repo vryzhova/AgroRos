@@ -361,6 +361,16 @@ body {
         grid-template-columns: 20% 15% 15% 15% 15% 20%;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
+    .main-view_content {
+        margin-left: 230px;
+    }
+    .slider__item {
+        height: 77vh;
+    }
+
+    .main-view{
+        height: 77vh;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -373,10 +383,57 @@ body {
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
+    .main-view_content {
+        margin-left: 20px;
+    }
+    
 }
 
 //*****************Currency*********
 
+//*********main-vew***********
+
+.slider__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    
+    
+}
+.first-item{
+    background-image: url('/assets/mainPage/hand.png');
+    background-repeat: no-repeat;
+}
+.second-item {
+    background-image: url('/assets/page2/main2.png');
+    background-repeat: no-repeat;
+}
+
+.main-view_content_text {
+    font-size: calc(24px + 26 * (100vw / 1280));
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+.main-view_content_text span {
+    color: #E15601;
+}
+
+.second-item .main-view_content_text {
+    color: #4E8A6B;
+}
+
+.main-view_content_list {
+    display: flex;
+    flex-direction: column;
+    align-content:space-between ;
+    border-left: 4px solid #4E8A6B;
+    font-family: 'Nunito', sans-serif;
+    color: #373535;
+    
+}
+//*********end main-vew***********
 
 
 

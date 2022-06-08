@@ -8,11 +8,50 @@
     <title>AgroRos</title>
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/ChiefSlider/chief-slider.min.css">
 </head>
 
 <body>
     <header class="header"></header>
-    <section class="main-view"></section>
+    <section class="main-view">
+        <div class="slider">
+            <div class="slider__container">
+                <div class="slider__wrapper">
+                    <div class="slider__items">
+                    <div class="slider__item first-item">
+                    <div class="main-view_content">
+                        <div class="main-view_content_text">Вклад с доходом <br> до <span>4,15%</span>  годовых</div>
+
+                        <button type="button" class="button middle light m-3 hidden">Подробнее</button>
+                        <button type="button" class="button middle dark m-3">Заявка</button>    
+                    </div>
+                    </div>
+                    <div class="slider__item second-item">
+                        <div class="main-view_content">
+                            <div class="main-view_content_text">Кредит по двум <br>
+                                документам <br>
+                                на любые цели</div>
+                            
+                            <div class="main-view_content_list p-2">
+                                    <div class="content-list_items ">Без страховки</div>
+                                    <div class="content-list_items " >Без оценки</div>
+                                    <div class="content-list_items ">Без дополнительных комиссий</div>
+                            </div>
+                            <div class="main-view_content__buttons">
+                                <button type="button" class="button middle light m-3 hidden">Подробнее</button>
+                            <button type="button" class="button middle dark m-3">Заявка</button>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+            <a href="#" class="slider__control" data-slide="prev"></a>
+            <a href="#" class="slider__control" data-slide="next"></a>
+        </div>
+    </section>
     <section class="currency">
         <div class="currency_content container" id="currency_content">
                 <div class="hidden">Курс для обмена</div>
@@ -191,6 +230,7 @@
     <!-- footer end -->
 
     <script src="/scripts/index.js" type="module"></script>
+    <script src="/ChiefSlider/chief-slider.js"></script>
 </body>
 
 </html>

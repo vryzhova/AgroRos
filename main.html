@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/normalize.css">
     <title>AgroRos</title>
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -12,7 +13,50 @@
 </head>
 
 <body>
-    <header class="header"></header>
+     <header class="header">
+        <div class="general-mnu-bg">
+            <div class="general-mnu">
+                <ul class="header__links general-mnu__links">
+                    <li class="general-mnu__link"><a href="#">частным клиентам</a></li>
+                    <li class="general-mnu__link"><a href="#">бизнесу</a></li>
+                    <li class="general-mnu__link"><a href="#">недвижимость</a></li>
+                    <li class="general-mnu__link"><a href="#">Поиск</a></li>
+                </ul>
+                <div class="general-mnu__right">
+                    <div class="general-mnu__location">
+                        <a href="#" class="general-mnu__location-link">
+                            <img src="assets/header/location.png" alt="">
+                            <p class="city" id="city">Санкт-Петербург</p>
+                        </a>
+                    </div>
+                    <a href="#" class="general-mnu__lng">
+                        EN
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mnu">
+            <div class="mnu__left">
+                <a href="#" class="logo"><img src="assets/header/лого.svg" alt=""></a>
+                <ul class="header__links mnu__links">
+                    <li class="mnu__link"><a href="#">карты</a></li>
+                    <li class="mnu__link"><a href="#">кредиты </a></li>
+                    <li class="mnu__link"><a href="#">вклады</a></li>
+                    <li class="mnu__link"><a href="#">Оплата</a></li>
+                    <li class="mnu__link"><a href="#">Услуги</a></li>
+                </ul>
+            </div>
+            <div class="mnu__right">
+                <div class="header__tel-info">
+                    <a href="tel:+78002224419" class="header__tel">
+                        <p class="header__tel-num">8 800 222 44 19</p>
+                    </a>
+                    <p class="header__connect">Свяжитесь с нами</p>
+                </div>
+                <a href="/"><button type="button" class="button big light btn-txt-red">ONLINE-BANK</button></a>
+            </div>
+        </div>
+    </header>
     <section class="main-view">
         <div class="slider">
             <div class="slider__container">
@@ -54,62 +98,63 @@
     </section>
     <section class="currency">
         <div class="currency_content container" id="currency_content">
-                <div class="hidden">Курс для обмена</div>
-                <div>Валюта</div>
-                <div class="hidden" >Покупка</div>
-                <div class="hidden" >Продажа</div>
-                <div class="hidden" >ЦБ</div>
-                <div >Обмен</div>
-                <div class="hidden" ><input type="radio" name="pay" value="money"><span class="p-1">Наличные</span></div>
-                <div class="currency_content_items"> 
-                    <div class="currency_content_items_img"><img src="/assets/currency/eur.png"></div>
-                    <div class="currency_content_item">1 EUR</div>
-                </div>
-                <div class="hidden" ><span>80,26 ₽</span></div>
-                <div class="hidden"  >71,22 ₽</div>
-                <div class="euro hidden"></div>
-                <div class="currency_content_exchange"><input class="exchange_input" id="exchange_input" type="text">
-                    <select id="select_input-valute" class="select_valute">
-                        <option value="RUB">₽</option>
-                        <option value="USD">$</option>
-                        <option value="EUR">€</option>
-                        <option value="CNY">¥</option>
-                    </select>
-                </div>
-            
-            
-                <div class="hidden" ><input type="radio" name="pay" value="card"><span class="p-1">Банковская карта</span></div>
-                <div class=" currency_content_items"> 
-                    <div class="currency_content_items_img"><img src="/assets/currency/us.png"></div>
-                    <div class="currency_content_item">1 USD</div>
-                </div>
-                <div class="hidden" ><span>80,26 ₽</span></div>
-                <div class="hidden" >71,22 ₽</div>
-                <div class="usd hidden"></div>
-                <div class="currency_content_exchange"><div class="exchange_output" id="exchange_output"></div>
-                    <select class="select_valute" id="select_output-valute">
-                        <option value="RUB">₽</option>
-                        <option value="USD">$</option>
-                        <option value="EUR">€</option>
-                        <option value="CNY">¥</option>
-                    </select></div>
-                    
-        
-                <div class="hidden" ><input type="radio" name="pay" value="online"><span class="p-1">Онлайн-банк</span></div>
-                <div class=" currency_content_items"> 
-                    <div class="currency_content_items_img"><img src="/assets/currency/cny.png"></div>
-                    <div class="currency_content_item">1 CNY</div>
-                </div>
-                <div class="hidden" ><span>10,16 ₽</span></div>
-                <div class="hidden" >11,22 ₽</div>
-                <div class="cny hidden"></div>
-                <div><button type="button" class="button big  light" id="exchangeBtn" >Купить валюту</button></div>
+            <div class="hidden">Курс для обмена</div>
+            <div>Валюта</div>
+            <div class="hidden">Покупка</div>
+            <div class="hidden">Продажа</div>
+            <div class="hidden">ЦБ</div>
+            <div>Обмен</div>
+            <div class="hidden"><input type="radio" name="pay" value="money"><span class="p-1">Наличные</span></div>
+            <div class="currency_content_items">
+                <div class="currency_content_items_img"><img src="/assets/currency/eur.png"></div>
+                <div class="currency_content_item">1 EUR</div>
+            </div>
+            <div class="hidden"><span>80,26 ₽</span></div>
+            <div class="hidden">71,22 ₽</div>
+            <div class="euro hidden"></div>
+            <div class="currency_content_exchange"><input class="exchange_input" id="exchange_input" type="text">
+                <select id="select_input-valute" class="select_valute">
+                    <option value="RUB">₽</option>
+                    <option value="USD">$</option>
+                    <option value="EUR">€</option>
+                    <option value="CNY">¥</option>
+                </select>
+            </div>
+            <div class="hidden"><input type="radio" name="pay" value="card"><span class="p-1">Банковская карта</span>
+            </div>
+            <div class=" currency_content_items">
+                <div class="currency_content_items_img"><img src="/assets/currency/us.png"></div>
+                <div class="currency_content_item">1 USD</div>
+            </div>
+            <div class="hidden"><span>80,26 ₽</span></div>
+            <div class="hidden">71,22 ₽</div>
+            <div class="usd hidden"></div>
+            <div class="currency_content_exchange">
+                <div class="exchange_output" id="exchange_output"></div>
+                <select class="select_valute" id="select_output-valute">
+                    <option value="RUB">₽</option>
+                    <option value="USD">$</option>
+                    <option value="EUR">€</option>
+                    <option value="CNY">¥</option>
+                </select>
+            </div>
+
+
+            <div class="hidden"><input type="radio" name="pay" value="online"><span class="p-1">Онлайн-банк</span></div>
+            <div class=" currency_content_items">
+                <div class="currency_content_items_img"><img src="/assets/currency/cny.png"></div>
+                <div class="currency_content_item">1 CNY</div>
+            </div>
+            <div class="hidden"><span>10,16 ₽</span></div>
+            <div class="hidden">11,22 ₽</div>
+            <div class="cny hidden"></div>
+            <div><button type="button" class="button big  light" id="exchangeBtn">Купить валюту</button></div>
         </div>
         <div class="currency_content-mobile">
 
         </div>
     </section>
-    
+
     <section class="products"></section>
     <section class="credits"></section>
     <section class="loancalc"></section>

@@ -1,4 +1,5 @@
-import  './currency.js';
+import  './currency.js'
+import './entry.js'
 localStorage.clear(); //для проверки подтягивания города
 
 document.addEventListener("DOMContentLoaded", function(event) {

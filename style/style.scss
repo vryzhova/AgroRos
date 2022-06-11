@@ -2,6 +2,15 @@
 // правила для шрифта
 // font-family: 'Nunito', sans-serif;
 
+// общие настройки 
+
+body{
+    font-family: 'Nunito', sans-serif;
+    padding-left: 139px;
+    padding-right: 106px;
+    
+}
+
 //*****************Currency*********
 
 .currency {
@@ -103,13 +112,112 @@ font-family: 'Nunito', sans-serif;
 //**********************end buttons*********
 
 
-// общие настройки 
 
-body{
-    font-family: 'Nunito', sans-serif;
+//********************** Credit Calc *********
+
+#tabs .tab {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 65px;
+    color: #807C7C;
+    padding-right: 10px;
+}
+
+#tabs .whiteborder {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 65px;
+    color: #373535;
+    padding-right: 10px;
+}
+
+#tabs .tabContent {
+    height: 350px;
     
 }
 
+#tabs .hide {
+    display: none;
+}
+
+#tabs .show {
+    display: block;
+}
+
+
+// ползунок
+
+.range {
+    width: 50%;
+}
+
+.range__value {
+    text-align: right;
+}
+
+.form-group {
+    display: grid;
+    font-size: 15px;
+    line-height: 65px;
+    color: #373535;
+}
+
+.range__text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.range__slider [type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 2px;
+    border-radius: 6px;
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+/* custom thumb */
+.range__slider [type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: #E15601 5px solid;
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+
+.range__slider [type="range"]::-webkit-slider-thumb:hover {
+    background: #f0932b;
+}
+
+.range__slider [type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #f0932b;
+    border: #f9ca24 5px solid; cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+
+.range__slider [type="range"]::-moz-range-thumb:hover {
+    background: #f9ca24;
+}
+
+/* remove border */
+input::-moz-focus-inner, input::-moz-focus-outer {
+    border: 0;
+}
+
+
+
+//********************** Credit Calc end *********
 
 //********************** Footer *********
 
@@ -123,8 +231,7 @@ body{
     font-weight: 300;
     font-size: 15px;
     line-height: 13px;
-    padding-left: 139px;
-    padding-right: 106px;
+
     padding-top: 70px;
     
 

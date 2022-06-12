@@ -1,4 +1,15 @@
 import  './currency.js';
+
+let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector('.mnu__links');
+
+menuBtn.addEventListener('click', function(){
+	menuBtn.classList.toggle('active');
+	menu.classList.toggle('active');
+})
+
+
+
 localStorage.clear(); //для проверки подтягивания города
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -40,7 +51,6 @@ function succesCallback(position){
         localStorage.setItem('city', `${city}`);
     })
     .catch(error => console.log(error));
- 
 }
 
 

@@ -46,6 +46,14 @@ body {
 }
 
 /**************** header ***************/
+.menu-btn {
+    display: none;
+}
+
+.hd-mobile {
+    display: none;
+}
+
 .header {
 
     font-size: 15px;
@@ -264,16 +272,86 @@ body {
 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
+
+    .menu-btn {
+        display: block;
+        width: 30px;
+        height: 40px;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+    }
+
+
+    .menu-btn span {
+        display: inline-block;
+        width: 23px;
+        height: 2px;
+        position: absolute;
+        margin: 6px auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #4E8A6B;
+        transition: all 0.5s;
+    }
+
+    .menu-btn span:nth-of-type(2) {
+        top: calc(50% - 10px);
+    }
+
+    .menu-btn span:nth-of-type(3) {
+        top: calc(50% + 10px);
+    }
+
+    /* Меняем гамбургер иконку, когда меню открыто */
+    .menu-btn.active span:nth-of-type(1) {
+        display: none;
+    }
+
+    .menu-btn.active span:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);
+    }
+
+    .menu-btn.active span:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(-45deg);
+    }
+
+    /* Меню, которое будет появляться */
+    .mnu__links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        background: rgba(239, 249, 240, 1);
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .mnu__links.active {
+        transform: translateX(0);
+
+
+    }
 
     .general-mnu,
     .mnu {
         margin: 0 auto;
-        max-width: 90%;
+        max-width: 95%;
     }
 
     .mnu__link {
-        padding-right: 15px;
+        padding: 15px;
     }
 
     .header__tel-info {
@@ -296,7 +374,6 @@ body {
     }
 
 }
-
 
 
 /****************** header end **********/
@@ -361,14 +438,16 @@ body {
         grid-template-columns: 20% 15% 15% 15% 15% 20%;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
+
     .main-view_content {
         margin-left: 230px;
     }
+
     .slider__item {
         height: 77vh;
     }
 
-    .main-view{
+    .main-view {
         height: 77vh;
     }
 }
@@ -386,7 +465,7 @@ body {
     .main-view_content {
         margin-left: 20px;
     }
-    
+
 }
 
 //*****************Currency*********
@@ -398,13 +477,15 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 100vw;
-    
-    
+
+
 }
-.first-item{
+
+.first-item {
     background-image: url('/assets/mainPage/hand.png');
     background-repeat: no-repeat;
 }
+
 .second-item {
     background-image: url('/assets/page2/main2.png');
     background-repeat: no-repeat;
@@ -427,12 +508,13 @@ body {
 .main-view_content_list {
     display: flex;
     flex-direction: column;
-    align-content:space-between ;
+    align-content: space-between;
     border-left: 4px solid #4E8A6B;
     font-family: 'Nunito', sans-serif;
     color: #373535;
-    
+
 }
+
 //*********end main-vew***********
 
 

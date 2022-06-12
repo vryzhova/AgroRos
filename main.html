@@ -14,7 +14,9 @@
 </head>
 
 <body>
+
     <header class="header hd-activ">
+
         <div class="general-mnu-bg">
 
             <div class="general-mnu">
@@ -29,7 +31,7 @@
                     <div class="general-mnu__location">
                         <a href="#" class="general-mnu__location-link">
                             <img src="assets/header/location.png" alt="">
-                            <p class="city" id="city">Санкт-Петербург</p>
+                            <p class="city" id="city">Москва</p>
                         </a>
                     </div>
                     <a href="#" class="general-mnu__lng">
@@ -210,16 +212,103 @@
             <div class="cny hidden"></div>
             <div><button type="button" class="button big  light" id="exchangeBtn">Купить валюту</button></div>
         </div>
-        <div class="currency_content-mobile">
-
-        </div>
     </section>
 
-    <section class="products"></section>
+    <section class="products">
+        <div class="container">
+            <div class="service_title">
+                <p class="txt1">Популярные продукты</p>
+            </div>
+            <div class="nav-scroller">
+                <div id="flexScroll">
+                    <div class="nav-scroller__item">
+                        <p class="titleMini">Моментальная карта</p>
+                        <div class="miniblock">
+                            <div class="smallestblock">
+                                <p class="grey">Бесплатный выпуск </br>и обслуживание</p>
+                                <p class="grey">
+                                    <a class="colorful">3 %</a> на остаток </br>по карте
+                                </p>
+                                <p class="grey">CashBack до <a class="colorful">1%</a></p>
+                                <button class="button middle light">Подробнее</button>
+                                <button id="mobile" class="button middle dark">Оформить</button>
+                            </div>
+                        </div>
+                        <img id="img2" src="assets\mainPage\momentCard.svg">
+
+                    </div>
+                    <div class="nav-scroller__item">
+                        <p class="titleMini">Ипотека от 4,7 %</p>
+                        <div class="miniblock">
+                            <div class="smallestblock">
+                                <p class="grey">Квартира в готовом </br>или строящемся доме</p>
+                                <p class="grey">Рассмотрение заявок</br>онлайн за 12 часов</p>
+                                <p class="grey">Первоначальный взнос</br>от <a class="colorful">10%</a></p>
+                                <button class="button middle dark">Рассчитать</button>
+                            </div>
+                        </div>
+                        <img class="img1" src=" assets\mainPage\houses.png">
+
+                    </div>
+                    <div class="nav-scroller__item">
+                        <p class="titleMini">Вклад “Премиальный”</p>
+                        <div class="miniblock">
+                            <div class="smallestblock">
+                                <p class="grey">Ставка от <a class="colorful">3,9 %</a></p>
+                                <p class="grey">Ежемесячные</br> выплаты</p>
+                                <p class="grey" id="final1">Минимальная сумма</br>пополнения</p>
+                                <button class="button middle dark">Оформить</button>
+                            </div>
+                        </div>
+                        <img class="img1" src=" assets\mainPage\houses.png">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <section class="credits"></section>
     <section class="loancalc"></section>
     <section class="service"></section>
-    <section class="entry"></section>
+    <section class="entry">
+        <div class="entry__content container">
+            <span class="main-header">Запись к персональному менеджеру</span>
+            <form class="entry__content_form">
+
+                <div class="col-3   p-1">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected disabled>Отделение банка</option>
+                        <option value="ул.Декабоистов">ул.Декабоистов</option>
+                        <option value="ул.Колонтай">ул.Колонтай</option>
+                        <option value="Невский проспект">Невский проспект</option>
+                    </select>
+                </div>
+                <div class="col-6 p-1">
+                    <input type="text" class="form-control form-control-sm " id="fullName" placeholder="ФИО">
+                </div>
+                <div class="col-3 p-1">
+                    <input type="tel" class="form-control form-control-sm" id="phone" placeholder="Телефон">
+                </div>
+
+
+                <div class=" col-lg-9 col-8 help-massage p-1">*После записи менеджер банка свяжется с вами и пригласит
+                    на встречу со специалистом по вашему вопросу в указанный день</div>
+                <div class="entry__btn col-3 p-1 justify-content-end">
+                    <button type="button" id="entryOpenPopup" class="button big dark">Записаться</button>
+                </div>
+            </form>
+            <div id="entryPopup" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="modal-content__text">
+                        <div id="outputName"></div>Вы записались к специалисту!
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <section class="mobile-bank"></section>
     <section class="news"></section>
     <section class="buttons">

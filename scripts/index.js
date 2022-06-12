@@ -1,4 +1,6 @@
-import  './currency.js';
+
+import  './currency.js'
+import './entry.js'
 
 let menuBtn = document.querySelector('.menu-btn');
 let menu = document.querySelector('.mnu__links');

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vryzhova/AgroRos/issues"
   },
-  "homepage": "https://github.com/vryzhova/AgroRos#readme"
+  "homepage": "https://github.com/vryzhova/AgroRos#readme",
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
+  }
 }

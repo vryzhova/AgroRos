@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
 ::-webkit-scrollbar {
   height: 8px;
   /* высота для горизонтального скролла */
@@ -12,6 +13,10 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #E15601;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
 }
 
 .container {
@@ -88,14 +93,13 @@
 
 body {
   font-family: 'Nunito', sans-serif;
-  overflow-x: hidden;
 }
 
 .txt1 {
   font-weight: 400;
   font-size: 5ex;
   line-height: 2ex;
-  margin-bottom: -1rem;
+  margin-bottom: 2rem;
 }
 
 .colorful {
@@ -188,5 +192,71 @@ body {
     max-width: 17em;
     margin-left: 1rem;
   }
+}
+
+#flexscrl2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.scroller_2 {
+  width: 110rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+
+.scrollitem_2 {
+  margin-right: 5rem;
+  width: 30em;
+}
+
+.business {
+  background: rgba(239, 249, 240, 0.5);
+  border-radius: 3px;
+  height: 162px;
+}
+
+.smallbis {
+  margin-left: 16rem;
+  padding-top: 1.5rem;
+}
+
+.titleMini2 {
+  font-weight: 400;
+  font-size: 2.5ex;
+  line-height: 6ex;
+  margin-bottom: -0.5rem;
+}
+
+#bord {
+  border-bottom: 2px solid #4E8A68;
+}
+
+.businessImg1 {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate(94%, -25%);
+          transform: translate(94%, -25%);
+  margin-top: -25%;
+}
+
+.businessImg2 {
+  -webkit-transform: translate(129%, 5%);
+          transform: translate(129%, 5%);
+  margin-top: -34%;
+  margin-left: -9%;
 }
 /*# sourceMappingURL=productsStyle.css.map */

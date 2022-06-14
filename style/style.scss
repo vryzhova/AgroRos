@@ -45,11 +45,10 @@ body {
 }
 
 /**************** header ***************/
-.menu-btn {
-    display: none;
-}
-
-.hd-mobile {
+.menu-hamb,
+.hd-mobile,
+.header__tel-mb,
+.header__location-mb {
     display: none;
 }
 
@@ -60,6 +59,7 @@ body {
     line-height: 11px;
     font-family: 'Nunito', sans-serif;
     color: #807C7C;
+
 }
 
 .header img {
@@ -191,6 +191,11 @@ body {
 .header .logo {
     max-width: 250px;
     min-width: 150px;
+    margin-top: -12px;
+}
+
+.header__tel-img {
+    display: none;
 }
 
 .header__tel-info {
@@ -198,6 +203,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     margin-right: 40px;
+    margin-top: 22px;
     justify-content: center;
 
 }
@@ -223,6 +229,7 @@ body {
     font-size: 12px;
     font-weight: 600;
     margin-bottom: 0;
+    margin-top: 5px;
 }
 
 
@@ -236,6 +243,10 @@ body {
 
 .btn-txt-red:hover {
     color: #FFF;
+}
+
+.popup {
+    display: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -260,87 +271,93 @@ body {
 
     }
 
-    .header .logo {
-        max-width: 250px;
-        min-width: 50px;
-    }
 
-    .big {
-        width: 160px;
-    }
 
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 966px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background-color: #FFF;
+        width: 100%;
+    }
 
-    .menu-btn {
-        display: block;
-        width: 30px;
+    .main-view {
+        margin-top: 79px;
+    }
+
+    .general-mnu-bg {
+        display: none;
+    }
+
+    .menu-hamb {
+        display: flex;
+        align-items: center;
+        /* width: 30px;
         height: 40px;
         position: relative;
         z-index: 2;
         overflow: hidden;
+        */
     }
 
+    .menu-hamb__field {
+        padding: 10px 30px 10px 0;
+        cursor: pointer;
 
-    .menu-btn span {
-        display: inline-block;
-        width: 23px;
-        height: 2px;
-        position: absolute;
-        margin: 6px auto;
+    }
+
+    .menu-hamb span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        /*position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        */
+        margin: 9px auto;
         background-color: #4E8A6B;
         transition: all 0.5s;
     }
 
-    .menu-btn span:nth-of-type(2) {
+    /*.menu-hamb span:nth-of-type(2) {
         top: calc(50% - 10px);
     }
 
-    .menu-btn span:nth-of-type(3) {
+    .menu-hamb span:nth-of-type(3) {
         top: calc(50% + 10px);
-    }
+    }*/
 
     /* Меняем гамбургер иконку, когда меню открыто */
-    .menu-btn.active span:nth-of-type(1) {
+    .menu-hamb.active span:nth-of-type(1) {
         display: none;
     }
 
-    .menu-btn.active span:nth-of-type(2) {
+    .menu-hamb.active span:nth-of-type(2) {
         top: 50%;
         transform: translate(-50%, 0%) rotate(45deg);
     }
 
-    .menu-btn.active span:nth-of-type(3) {
+    .menu-hamb.active span:nth-of-type(3) {
         top: 50%;
         transform: translate(-50%, 0%) rotate(-45deg);
     }
 
-    /* Меню, которое будет появляться */
-    .mnu__links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 15px;
-        background: rgba(239, 249, 240, 1);
-        transform: translateX(-100%);
-        transition: transform 0.5s;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .header .logo {
+        margin-top: 0;
+    }
 
 
+    .mnu__left .mnu__links {
+        display: none;
     }
 
     .mnu__links.active {
         transform: translateX(0);
-
-
     }
 
     .general-mnu,
@@ -353,9 +370,6 @@ body {
         padding: 15px;
     }
 
-    .header__tel-info {
-        margin-right: 10px;
-    }
 
     .header__tel {
 
@@ -363,13 +377,92 @@ body {
 
     }
 
-    .header .logo {
-        max-width: 250px;
-        min-width: 50px;
+
+
+    .header__location-mb {
+        display: block;
+        min-width: 40px;
+
     }
 
-    .big {
-        width: 160px;
+    .header__tel-info {
+        margin-right: 20px;
+    }
+
+
+    /* Меню, которое будет появляться */
+    .popup {
+        position: fixed;
+        top: 79px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 100;
+        display: flex;
+        transition: 0.3s;
+    }
+
+    .popup.open {
+        left: 0;
+    }
+
+    .popup .mnu__links {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 0;
+        overflow: scroll;
+        text-transform: capitalize;
+    }
+
+    .popup .mnu__links>ul {
+        margin: auto;
+    }
+
+    .popup .mnu__links>li {
+        width: 100%;
+    }
+
+    .popup .mnu__links>li>a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        font-size: 30px;
+        font-weight: 600px;
+        color: #807C7C;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    body.noscroll {
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (max-width: 625px) {
+    .menu-hamb__field {
+        padding: 10px 20px 10px 0;
+    }
+
+    .header__tel-info {
+        display: none;
+    }
+
+    .header__tel-mb,
+    .header__location-mb {
+        display: block;
+
+
+    }
+
+    .header__tel-mb {
+        min-width: 30px;
+
     }
 
 }

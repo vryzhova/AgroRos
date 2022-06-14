@@ -15,7 +15,8 @@
 </head>
 
 <body>
-    <header class="header">
+
+    <header class="header hd-activ">
         <div class="general-mnu-bg">
             <div class="general-mnu">
                 <ul class="header__links general-mnu__links">
@@ -38,27 +39,48 @@
             </div>
         </div>
         <div class="mnu">
-            <div class="mnu__left">
+
+            <nav class="mnu__left">
+                <div class="menu-hamb">
+                    <div class="menu-hamb__field" id="hamb">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
                 <a href="#" class="logo"><img src="assets/header/лого.svg" alt=""></a>
-                <ul class="header__links mnu__links">
+                <ul class="header__links mnu__links" id="mnu__links">
                     <li class="mnu__link"><a href="#">карты</a></li>
                     <li class="mnu__link"><a href="#">кредиты </a></li>
                     <li class="mnu__link"><a href="#">вклады</a></li>
                     <li class="mnu__link"><a href="#">Оплата</a></li>
                     <li class="mnu__link"><a href="#">Услуги</a></li>
                 </ul>
-            </div>
+            </nav>
             <div class="mnu__right">
+                <div class="header__location-mb">
+                    <a href="#" class="general-mnu__location-link">
+                        <img src="assets/header/location.png" alt="">
+                    </a>
+                </div>
                 <div class="header__tel-info">
                     <a href="tel:+78002224419" class="header__tel">
                         <p class="header__tel-num">8 800 222 44 19</p>
                     </a>
                     <p class="header__connect">Свяжитесь с нами</p>
                 </div>
+                <div class="header__tel-mb">
+                    <a href="tel:+78002224419" class="header__tel">
+                        <img src="assets/header/call.png" alt="">
+                    </a>
+                </div>
+
                 <a href="/"><button type="button" class="button big light btn-txt-red">ONLINE-BANK</button></a>
             </div>
         </div>
     </header>
+
+    <div class="popup" id="popup"></div>
     <section class="main-view">
         <div class="slider">
             <div class="slider__container">

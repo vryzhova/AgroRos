@@ -58,7 +58,7 @@ body {
 }
 
 .nav-scroller {
-  width: 110rem;
+  width: 109%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +68,7 @@ body {
 }
 
 .nav-scroller__item {
-  margin-right: 11rem;
+  margin-right: 6vw;
   width: 30em;
 }
 
@@ -209,55 +209,70 @@ body {
 }
 
 .scroller_2 {
-  width: 110rem;
+  width: 109%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   overflow-x: auto;
-  margin-bottom: 30px;
+  padding-bottom: -10px;
 }
 
 .scrollitem_2 {
-  margin-right: 2rem;
+  margin-right: 1rem;
   width: 30rem;
+  height: 95%;
 }
 
 .business {
   background: rgba(239, 249, 240, 0.5);
   border-radius: 3px;
-  height: 170px;
-  width: 450px;
+  height: 20vh;
+  width: 27em;
 }
 
 .smallbis {
-  margin-left: 16rem;
-  padding-top: 1.5rem;
+  margin-left: 40%;
+  padding-top: 7%;
 }
 
 .titleMini2 {
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
   font-size: 2.5ex;
   line-height: 6ex;
   margin-bottom: -0.5rem;
 }
 
 #bord {
-  border-bottom: 2px solid #4E8A68;
+  border-bottom: 1px solid #4E8A68;
+  margin-right: 50px;
 }
 
 .businessImg1 {
   position: relative;
   overflow: hidden;
-  -webkit-transform: translate(94%, -25%);
-          transform: translate(94%, -25%);
-  margin-top: -25%;
+  -webkit-transform: translate(80%, -160%);
+          transform: translate(80%, -160%);
 }
 
 .businessImg2 {
-  -webkit-transform: translate(129%, 5%);
-          transform: translate(129%, 5%);
-  margin-top: -34%;
-  margin-left: -9%;
+  -webkit-transform: translate(2%, -330%);
+          transform: translate(2%, -330%);
+}
+
+.businessImg5 {
+  -webkit-transform: translate(2%, -345%);
+          transform: translate(2%, -345%);
+}
+
+.businessImg3 {
+  -webkit-transform: translate(2%, -320%);
+          transform: translate(2%, -320%);
+}
+
+.businessImg4 {
+  -webkit-transform: translate(1%, -301%);
+          transform: translate(1%, -301%);
 }
 /*# sourceMappingURL=productsStyle.css.map */

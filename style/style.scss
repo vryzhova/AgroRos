@@ -41,6 +41,8 @@
 
 .body {
     font-family: 'Nunito', sans-serif;
+    max-width: 1440px;
+    min-width: 440px;
 
 }
 
@@ -880,11 +882,12 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 //********************** Credit Calc end *********
 
 
+
 //********************** Footer *********
 
 .footer {
     height: 582px;
-    max-width: 1440px;
+    max-width: 95%;
     grid-area: footer;
     display: grid;
     grid-template-rows: max-content max-content max-content max-content max-content;
@@ -899,11 +902,8 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 
     .footer_part1 {
         display: grid;
-
         grid-template-columns: repeat(4, 1fr);
-    }
-
-    ;
+    };
 
     .footer_part2 {
         display: grid;

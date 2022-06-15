@@ -186,7 +186,7 @@ rangeKreditPeriod.oninput = function ()
 
     if (Number(rangeKreditSum) <= 1000000) 
         {
-            document.getElementById('rangeKreditRate').innerHTML = '9.4%';
+            document.getElementById('rangeKreditRate').innerHTML = '9,4%';
 
             rangeKreditRateMonth = Number(9.4/ 100 / 12).toFixed(4); // месячная проц ставка        
         }
@@ -194,13 +194,13 @@ rangeKreditPeriod.oninput = function ()
         {
             if (Number(rangeKreditSum) <= 3000000)
                 {
-                    document.getElementById('rangeKreditRate').innerHTML = '9.8%';
+                    document.getElementById('rangeKreditRate').innerHTML = '9,8%';
 
                     rangeKreditRateMonth = Number(9.8 / 100 / 12).toFixed(4); // месячная проц ставка            
                 }
             else
                 {
-                    document.getElementById('rangeKreditRate').innerHTML = '10.2%';
+                    document.getElementById('rangeKreditRate').innerHTML = '10,2%';
 
                     rangeKreditRateMonth = Number(10.2 / 100 / 12).toFixed(4); // месячная проц ставка
                 }
@@ -280,7 +280,7 @@ rangeIpotekaSum.oninput = function ()
         }
         else 
         {
-            if (Number(rangeIpotekaSum) <= 3000000)
+            if (Number(rangeIpotekaSum) <= 7000000)
                 {
                     document.getElementById('rangeIpotekaRate').innerHTML = '7,8%';
                     rangeIpotekaRateMonth = Number(7.8 / 100 / 12).toFixed(4); // месячная проц ставка            
@@ -311,25 +311,25 @@ rangeIpotekaPeriod.oninput = function ()
 
     let rangeIpotekaPayment = 0;  // платеж ежемесячный аннуитетный
 
-    if (Number(rangeIpotekaSum) <= 1000000) 
+    if (Number(rangeIpotekaSum) <= 3000000) 
         {
-            document.getElementById('rangeIpotekaRate').innerHTML = '9.4%';
+            document.getElementById('rangeIpotekaRate').innerHTML = '8,4%';
 
             rangeIpotekaRateMonth = Number(9.4/ 100 / 12).toFixed(4); // месячная проц ставка        
         }
         else 
         {
-            if (Number(rangeIpotekaSum) <= 3000000)
+            if (Number(rangeIpotekaSum) <= 7000000)
                 {
-                    document.getElementById('rangeIpotekaRate').innerHTML = '9.8%';
+                    document.getElementById('rangeIpotekaRate').innerHTML = '7,8%';
 
                     rangeIpotekaRateMonth = Number(9.8 / 100 / 12).toFixed(4); // месячная проц ставка            
                 }
             else
                 {
-                    document.getElementById('rangeIpotekaRate').innerHTML = '10.2%';
+                    document.getElementById('rangeIpotekaRate').innerHTML = '7,2%';
 
-                    rangeIpotekaRateMonth = Number(10.2 / 100 / 12).toFixed(4); // месячная проц ставка
+                    rangeIpotekaRateMonth = Number(7.2 / 100 / 12).toFixed(4); // месячная проц ставка
                 }
         }
 

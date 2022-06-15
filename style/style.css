@@ -32,6 +32,8 @@
 
 .body {
   font-family: "Nunito", sans-serif;
+  max-width: 1440px;
+  min-width: 440px;
 }
 
 /**************** header ***************/
@@ -787,7 +789,7 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 
 .footer {
   height: 582px;
-  max-width: 1440px;
+  max-width: 95%;
   grid-area: footer;
   display: grid;
   grid-template-rows: max-content max-content max-content max-content max-content;

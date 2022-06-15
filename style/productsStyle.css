@@ -275,6 +275,7 @@ body {
 }
 
 .newscontent {
+  margin-top: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

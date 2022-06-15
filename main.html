@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroRos</title>
-    <link rel="stylesheet" href="./style/style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
@@ -89,53 +90,69 @@
             <!--Расчет кредита-->
             <div class="tabContent">
 
-                <div class="range kredit sum">
+                <div class="tabContentR">
+                    <!--сумма кредита-->
+                    <div class="range kredit sum">
 
-                    <div class="form-group range__text kredit sum">
-                        <div>Сумма кредита</div>
+                        <div class="form-group range__text kredit sum">
+                            <div>Сумма кредита</div>
 
-                        <div class="form-group range__value kredit sum">
-                            <span></span>
+                            <div class="form-group range__value kredit sum">
+                                <span></span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group range__slider kredit sum">
-                        <input type="range" step="1000">
-                    </div>
-
-                </div>
-                <br>
-
-                <div class="range kredit period">
-
-                    <div class="form-group range__text kredit period">
-                        <div>Срок кредита</div>
-
-                        <div class="form-group range__value kredit period">
-                            <span></span>
+                        <div class="form-group range__slider kredit sum">
+                            <input type="range" step="1000" min="100000" max="5000000" id="rangeKreditSum">
                         </div>
+
                     </div>
 
-                    <div class="form-group range__slider kredit period">
-                        <input type="range" step="1">
+                    <!--срок кредита-->
+                    <div class="range kredit period">
+
+                        <div class="form-group range__text kredit period">
+                            <div>Срок кредита</div>
+
+                            <div class="form-group range__value kredit period">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group range__slider kredit period">
+                            <input type="range" step="1" id="rangeKreditPeriod">
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="tabContentRtext">
+                        * Расчёты кредитного калькулятора являются ориентировочными и не означают обязательства Банка по
+                        предоставлению кредита
+                    </div>
+                </div>
+
+                <div class="tabContentL">
+                    <!--ставка кредита-->
+                    <div>
+                        <div>Процентная ставка</div>
+                        <div class="tabContentLrate">
+                            <p>от</p>
+                            <p class="range kredit rate" id="rangeKreditRate">9.4%</p>
+                            <p>годовых в рублях</p>
+                        </div>
+                        <button type="button" class="button middle light">Подробнее</button>
                     </div>
 
-                </div>
-                <br>
-                <br>
+                    <!--платеж кредита-->
+                    <div>
+                        <div>Ежемесячный платеж</div>
+                        <div class=" tabContentLpay">
+                            <p class="range kredit payment" id="rangeKreditPayment"></p>
+                            <p> рублей</p>
+                        </div>
+                        <button type="button" class="button middle dark">Заявка</button>
+                    </div>
 
-
-                <div class="range kredit rate">
-                    f
-                </div>
-
-
-                <br>
-                <br>
-                <br>
-                <div>
-                    * Расчёты кредитного калькулятора являются ориентировочными и не означают обязательства Банка по
-                    предоставлению кредита
                 </div>
 
             </div>
@@ -286,6 +303,7 @@
 
 
     <script src="/scripts/index.js" type="module"></script>
+    </script>
 </body>
 
 </html>

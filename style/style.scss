@@ -133,8 +133,70 @@ font-family: 'Nunito', sans-serif;
 }
 
 #tabs .tabContent {
-    height: 350px;
     
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+
+    .tabContentR
+{
+    display: grid;
+    font-size: 15px;
+    color: #373535;
+    align-items: center;
+}
+
+.tabContentL
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    color: #373535;
+    align-content: center;
+    margin-left: 10px;
+}
+.tabContentRtext{
+    font-size: 10px;
+    color: #807C7C;
+}
+
+.tabContentLrate
+{
+    display: grid;
+    width: 90%;
+    grid-template-columns: 0.5fr 2fr 2fr;
+    grid-template-rows: 1fr;
+    font-size: 10px;
+    color: #807C7C;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 10px;
+    max-width: 95%;
+}
+
+.tabContentLpay
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    font-size: 10px;
+    color: #807C7C;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 10px;
+    max-width: 95%;
+}
+
+#rangeKreditRate{
+    font-size: 30px;
+    color: #F9A123;
+}
+
+#rangeKreditPayment{
+    font-size: 30px;
+    color: #4E8A6B;
+}
+
 }
 
 #tabs .hide {
@@ -146,10 +208,11 @@ font-family: 'Nunito', sans-serif;
 }
 
 
+
 // ползунок
 
 .range {
-    width: 50%;
+    width: 90%;
 }
 
 .range__value {
@@ -181,8 +244,8 @@ font-family: 'Nunito', sans-serif;
 .range__slider [type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: #FFFFFF;
     border: #E15601 5px solid;
@@ -196,8 +259,8 @@ font-family: 'Nunito', sans-serif;
 }
 
 .range__slider [type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border: 0;
     border-radius: 50%;
     background: #f0932b;
@@ -310,7 +373,7 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 
     .footer_part1__tel{
         font-weight: 700;
-        font-size: 29px;
+        font-size: 1.5rem;
         line-height: 11px;
         text-transform: capitalize;
         color: #4E8A6B;

@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
-<body>
-    <header class="header">
+<body class="body">
+
+    <header class="header hd-activ">
         <div class="general-mnu-bg">
             <div class="general-mnu">
                 <ul class="header__links general-mnu__links">
@@ -39,27 +40,48 @@
             </div>
         </div>
         <div class="mnu">
-            <div class="mnu__left">
+
+            <nav class="mnu__left">
+                <div class="menu-hamb">
+                    <div class="menu-hamb__field" id="hamb">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
                 <a href="#" class="logo"><img src="assets/header/лого.svg" alt=""></a>
-                <ul class="header__links mnu__links">
+                <ul class="header__links mnu__links" id="mnu__links">
                     <li class="mnu__link"><a href="#">карты</a></li>
                     <li class="mnu__link"><a href="#">кредиты </a></li>
                     <li class="mnu__link"><a href="#">вклады</a></li>
                     <li class="mnu__link"><a href="#">Оплата</a></li>
                     <li class="mnu__link"><a href="#">Услуги</a></li>
                 </ul>
-            </div>
+            </nav>
             <div class="mnu__right">
+                <div class="header__location-mb">
+                    <a href="#" class="general-mnu__location-link">
+                        <img src="assets/header/location.png" alt="">
+                    </a>
+                </div>
                 <div class="header__tel-info">
                     <a href="tel:+78002224419" class="header__tel">
                         <p class="header__tel-num">8 800 222 44 19</p>
                     </a>
                     <p class="header__connect">Свяжитесь с нами</p>
                 </div>
+                <div class="header__tel-mb">
+                    <a href="tel:+78002224419" class="header__tel">
+                        <img src="assets/header/call.png" alt="">
+                    </a>
+                </div>
+
                 <a href="/"><button type="button" class="button big light btn-txt-red">ONLINE-BANK</button></a>
             </div>
         </div>
     </header>
+
+    <div class="popup" id="popup"></div>
     <section class="main-view">
         <div class="slider">
             <div class="slider__container">
@@ -274,6 +296,173 @@
         </div>
         </div>
     </section>
+
+
+    <!-- РАСЧЕТ КРЕДИТА -->
+    <section class="loancalc">
+        <div id="tabs">
+            <div class="tab whiteborder">Расчет кредита</div>
+            <div class="tab">Расчет ипотеки</div>
+            <div class="tab">Расчет страховки</div>
+
+            <!--Расчет кредита-->
+            <div class="tabContent">
+
+                <div class="tabContentR">
+                    <!--сумма кредита-->
+                    <div class="range kredit sum">
+
+                        <div class="form-group range__text kredit sum">
+                            <div>Сумма кредита</div>
+
+                            <div class="form-group range__value kredit sum">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group range__slider kredit sum">
+                            <input type="range" step="1000" min="100000" max="5000000" id="rangeKreditSum">
+                        </div>
+
+                    </div>
+
+                    <!--срок кредита-->
+                    <div class="range kredit period">
+
+                        <div class="form-group range__text kredit period">
+                            <div>Срок кредита</div>
+
+                            <div class="form-group range__value kredit period">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group range__slider kredit period">
+                            <input type="range" step="1" id="rangeKreditPeriod">
+                        </div>
+
+                    </div>
+                    <br>
+
+                </div>
+
+                <div class="tabContentL">
+                    <!--ставка кредита-->
+                    <div>
+                        <div>Процентная ставка</div>
+                        <div class="tabContentLrate">
+                            <p>от</p>
+                            <p class="range kredit rate" id="rangeKreditRate">9,4%</p>
+                            <p>годовых в рублях</p>
+                        </div>
+                        <button type="button" class="button middle light">Подробнее</button>
+                    </div>
+
+                    <!--платеж кредита-->
+                    <div>
+                        <div>Ежемесячный платеж</div>
+                        <div class=" tabContentLpay">
+                            <p class="range kredit payment" id="rangeKreditPayment"></p>
+                            <p class="rangekreditpayment_text">рублей</p>
+                        </div>
+                        <button type="button" class="button middle dark">Заявка</button>
+                    </div>
+
+                </div>
+
+                <p class="tabContentRtext">
+                    * Расчёты кредитного калькулятора являются ориентировочными и не означают обязательства Банка по
+                    предоставлению кредита
+                </p>
+
+            </div>
+
+            <!--Расчет ипотеки-->
+            <div class="tabContent">
+
+                <div class="tabContentR">
+                    <!--сумма ипотеки-->
+                    <div class="range Ipoteka sum">
+
+                        <div class="form-group range__text Ipoteka sum">
+                            <div>Сумма кредита</div>
+
+                            <div class="form-group range__value Ipoteka sum">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group range__slider Ipoteka sum">
+                            <input type="range" step="1000" min="100000" max="5000000" id="rangeIpotekaSum">
+                        </div>
+
+                    </div>
+
+                    <!--срок ипотеки-->
+                    <div class="range Ipoteka period">
+
+                        <div class="form-group range__text Ipoteka period">
+                            <div>Срок кредита</div>
+
+                            <div class="form-group range__value Ipoteka period">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group range__slider Ipoteka period">
+                            <input type="range" step="1" id="rangeIpotekaPeriod">
+                        </div>
+
+                    </div>
+                    <br>
+
+                </div>
+
+                <div class="tabContentL">
+                    <!--ставка по ипотеке-->
+                    <div>
+                        <div>Процентная ставка</div>
+                        <div class="tabContentLrate">
+                            <p>от</p>
+                            <p class="range Ipoteka rate" id="rangeIpotekaRate">8,4%</p>
+                            <p>годовых в рублях</p>
+                        </div>
+                        <button type="button" class="button middle light">Подробнее</button>
+                    </div>
+
+                    <!--платеж по ипотеке-->
+                    <div>
+                        <div>Ежемесячный платеж</div>
+                        <div class=" tabContentLpay">
+                            <p class="range Ipoteka payment" id="rangeIpotekaPayment"></p>
+                            <p class="rangeIpotekapayment_text">рублей</p>
+                        </div>
+                        <button type="button" class="button middle dark">Заявка</button>
+                    </div>
+
+                </div>
+
+                <p class="tabContentRtext">
+                    * Расчёты кредитного калькулятора являются ориентировочными и не означают обязательства Банка по
+                    предоставлению кредита
+                </p>
+
+            </div>
+
+            <!--Расчет страховки-->
+            <div class="tabContent">
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- РАСЧЕТ КРЕДИТА end -->
+
+
+
+    <section class="service"></section>
     <section class="entry">
         <div class="entry__content container">
             <span class="main-header">Запись к персональному менеджеру</span>
@@ -314,12 +503,7 @@
     </section>
     <section class="mobile-bank"></section>
     <section class="news"></section>
-    <section class="buttons">
-        <button type="button" class="button big light">ONLINE-BANK</button>
-        <button type="button" class="button middle light">Подробнее</button>
-        <button type="button" class="button middle dark">Заявка</button>
-        <button type="button" class="button little dark">Рассчитать</button>
-    </section>
+
 
 
     <!-- footer -->
@@ -425,6 +609,15 @@
     </footer>
 
     <!-- footer end -->
+
+    <!-- КНОПКИ
+    <section class="buttons">
+        <button type="button" class="button big light">ONLINE-BANK</button>
+        <button type="button" class="button middle light">Подробнее</button>
+        <button type="button" class="button middle dark">Заявка</button>
+        <button type="button" class="button little dark">Рассчитать</button>
+    </section>
+-->
 
     <script src="/scripts/index.js" type="module"></script>
     <script src="/ChiefSlider/chief-slider.js"></script>

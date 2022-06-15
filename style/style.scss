@@ -39,7 +39,7 @@
 
 // общие настройки 
 
-body {
+.body {
     font-family: 'Nunito', sans-serif;
 
 }
@@ -694,6 +694,190 @@ body {
 
 //*********end entry***************
 
+
+
+//********************** Credit Calc *********
+
+#tabs .tab 
+{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 65px;
+    color: #807C7C;
+    
+    padding-left: 130px;
+    padding-right: 106px;
+}
+
+#tabs .whiteborder 
+{
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 65px;
+    color: #373535;
+    padding-right: 10px;
+}
+
+#tabs .tabContent 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    padding-left: 139px;
+    padding-right: 106px;
+
+    .tabContentR
+    {
+        display: grid;
+        font-size: 15px;
+        color: #373535;
+        align-items: center;
+    }
+
+    .tabContentL
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 15px;
+        color: #373535;
+        align-content: center;
+        margin-left: 10px;
+    }
+    .tabContentRtext{
+        font-size: 10px;
+        color: #807C7C;
+        width: 95%;
+    }
+
+    .tabContentLrate
+    {
+        display: grid;
+        width: 90%;
+        grid-template-columns: 0.5fr 2fr 2fr;
+        grid-template-rows: 1fr;
+        font-size: 10px;
+        color: #807C7C;
+        justify-content: center;
+        align-items: center; 
+        padding-top: 10px;
+        max-width: 95%;
+    }
+
+    .tabContentLpay
+    {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+        font-size: 10px;
+        color: #807C7C;
+        justify-content: center;
+        align-items: center; 
+        padding-top: 10px;
+        max-width: 95%;
+    }
+
+    #rangeKreditRate,
+    #rangeIpotekaRate,
+    #rangeStrahRate
+    {
+        font-size: 30px;
+        color: #F9A123;
+    }
+
+    #rangeKreditPayment,
+    #rangeIpotekaPayment,
+    #rangeStrahPayment
+    {
+        font-size: 30px;
+        color: #4E8A6B;
+    }
+
+    .rangekreditpayment_text
+    {
+        margin-left: 10%;
+    }
+
+}
+
+#tabs .hide {
+    display: none;
+}
+
+#tabs .show {
+    display: grid;
+}
+
+// ползунок
+.range {
+    width: 90%;
+}
+
+.range__value {
+    text-align: right;
+}
+
+.form-group {
+    display: grid;
+    font-size: 15px;
+    line-height: 65px;
+    color: #373535;
+}
+
+.range__text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.range__slider [type="range"] {
+    width: 100%;
+    
+    -webkit-appearance: none;
+    height: 2px;
+    border-radius: 6px;
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+/* custom thumb */
+.range__slider [type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: #E15601 5px solid;
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+
+.range__slider [type="range"]::-webkit-slider-thumb:hover {
+    background: #f0932b;
+}
+
+.range__slider [type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border: 0;
+    border-radius: 50%;
+    background: #f0932b;
+    border: #f9ca24 5px solid; cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+
+.range__slider [type="range"]::-moz-range-thumb:hover {
+    background: #f9ca24;
+}
+
+/* remove border */
+input::-moz-focus-inner, input::-moz-focus-outer {
+    border: 0;
+}
+
+//********************** Credit Calc end *********
 
 
 //********************** Footer *********

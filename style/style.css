@@ -276,11 +276,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .general-mnu,
-  .mnu {
-    /* margin: 0 auto;
-        max-width: 90%;*/
-  }
   .mnu__link {
     padding-right: 15px;
   }
@@ -300,12 +295,49 @@
     z-index: 100;
     background-color: #FFF;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mnu__left .mnu__links,
+  .general-mnu__lng,
+  .general-mnu__location {
+    display: none;
   }
   .main-view {
-    margin-top: 79px;
+    margin-top: 100px;
   }
   .general-mnu-bg {
-    display: none;
+    background-color: #f1f1f1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .general-mnu {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 11px;
+    /* identical to box height, or 92% */
+    text-align: right;
+    text-transform: uppercase;
+    color: #807C7C;
+    height: auto;
+    padding: 5px;
+  }
+  .general-mnu__links {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .mnu {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .menu-hamb {
     display: -webkit-box;
@@ -368,17 +400,9 @@
   .header .logo {
     margin-top: 0;
   }
-  .mnu__left .mnu__links {
-    display: none;
-  }
   .mnu__links.active {
     -webkit-transform: translateX(0);
             transform: translateX(0);
-  }
-  .general-mnu,
-  .mnu {
-    /*margin: 0 auto;
-        max-width: 95%;*/
   }
   .mnu__link {
     padding: 15px;

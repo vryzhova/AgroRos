@@ -150,10 +150,6 @@ body {
             order: 1;
     margin: 0%;
   }
-  .container {
-    overflow-x: hidden;
-    padding-left: 0%;
-  }
   #img2 {
     -webkit-transform: none;
             transform: none;

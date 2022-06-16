@@ -43,7 +43,7 @@
     font-family: 'Nunito', sans-serif;
     max-width: 1440px;
     // min-width: 440px;
-    
+
 }
 
 /**************** header ***************/
@@ -126,7 +126,7 @@
 }
 
 .general-mnu__lng {
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -310,23 +310,22 @@
         padding: 10px 30px 10px 0;
         cursor: pointer;
 
+        position: relative;
     }
 
     .menu-hamb span {
         display: block;
         width: 30px;
         height: 3px;
-        /*position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        */
+        /*  position: absolute;*/
         margin: 9px auto;
         background-color: #4E8A6B;
         transition: all 0.5s;
+
     }
 
-    /*.menu-hamb span:nth-of-type(2) {
+    /*
+    .menu-hamb span:nth-of-type(2) {
         top: calc(50% - 10px);
     }
 
@@ -334,20 +333,28 @@
         top: calc(50% + 10px);
     }*/
 
-    /* Меняем гамбургер иконку, когда меню открыто */
-    .menu-hamb.active span:nth-of-type(1) {
-        display: none;
+    /* Меняем гамбургер иконку, когда меню открыто 
+    .menu-hamb__field.active span:nth-of-type(1) {
+        top: 50%;
+        transform: rotate(45deg) translate(0px, -50%);
+
+
     }
 
-    .menu-hamb.active span:nth-of-type(2) {
-        top: 50%;
-        transform: translate(-50%, 0%) rotate(45deg);
+    .menu-hamb__field.active span:nth-of-type(2) {
+
+        transform: scale(0) translate(0px, -50%);
+
     }
 
-    .menu-hamb.active span:nth-of-type(3) {
-        top: 50%;
-        transform: translate(-50%, 0%) rotate(-45deg);
-    }
+    .menu-hamb__field.active span:nth-of-type(3) {
+
+        top: -10px;
+        transform: rotate(-45deg) translate(0px, -50%);
+
+    }*/
+
+    /* ******************************************* */
 
     .header .logo {
         margin-top: 0;
@@ -378,8 +385,6 @@
         font-size: 20px;
 
     }
-
-
 
     .header__location-mb {
         display: block;
@@ -469,7 +474,6 @@
 
 }
 
-
 /****************** header end **********/
 
 //*****************Currency*********
@@ -524,6 +528,7 @@
     border: none;
     outline: none;
 }
+
 .pay_button {
     display: flex;
     justify-content: center;
@@ -698,10 +703,152 @@
 
 //*********end entry***************
 
+//*********** credits start *************//
+.credits {
+    position: relative;
+}
 
+.credits__bg {
+    position: absolute;
+    width: 100%;
+    height: 285px;
+    background: rgba(239, 228, 213, 0.4);
+    border-radius: 3px;
+    z-index: 1;
+    top: 145px;
+}
+
+.credits__wrapper {
+    position: relative;
+    margin: 0 auto;
+    /*width: 85%;*/
+    display: flex;
+    z-index: 10;
+    max-width: 1320px
+}
+
+.credits img {
+    min-width: 100%;
+    width: 30%;
+}
+
+
+
+.credits__name {
+
+    /* calc(15px + 20 * (100vw / 1280));*/
+    font-size: calc((100vw - 480px)/(1440 - 480) * (35 - 20) + 20px);
+    color: #373535;
+    font-style: normal;
+    font-weight: 400;
+    //font-size: 35px;
+    line-height: 65px;
+    margin-top: 60px;
+
+}
+
+.credit__links {
+    list-style-type: none;
+    border-left: #4E8A6B 2px solid;
+    margin-top: 45px;
+}
+
+.credit__link a {
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc((100vw - 480px)/(1440 - 480) * (20 - 15) + 15px);
+    line-height: 46px;
+    letter-spacing: 0.035em;
+    text-decoration: none;
+    color: #807C7C;
+    transition: color .4s ease;
+}
+
+.credit__link a:hover {
+    color: #E15601;
+
+    border-bottom: 2px solid #4E8A6B;
+}
+
+@media screen and (max-width: 1200px) {
+    .credits__wrapper {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .credits__wrapper {
+        max-width: auto;
+        overflow: hidden;
+    }
+
+    .credits__info {
+        margin-left: 50px;
+        order: 1;
+    }
+
+    .credits__img {
+        order: 2;
+        /*margin-right: -20px;*/
+        position: absolute;
+        right: -190px;
+
+
+    }
+
+    .credit__link a {
+        /* line-height: 26px;*/
+        color: #373535;
+    }
+
+    .credits img {
+        min-width: 100%;
+        width: 20%;
+    }
+
+    .credit__links {
+        margin-bottom: 11rem;
+
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .credits__wrapper {
+        max-width: auto;
+    }
+
+    .credits__info {
+        margin-left: 10px;
+
+
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .credits__wrapper {
+        max-width: auto;
+    }
+
+    .credits__img {
+        /*margin-right: -20px;*/
+        display: none;
+        right: -100%;
+    }
+
+    .credit__links {
+        margin-bottom: 50px;
+
+    }
+}
+
+
+//*********** credits end *************//
 
 //********************** Credit Calc *********
-.loancalc{
+.loancalc {
     max-width: 95%;
     display: flex;
     margin: 0 auto;
@@ -709,44 +856,39 @@
 }
 
 
-#tabs .tab 
-{
+#tabs .tab {
     display: inline-block;
     font-weight: 400;
     //font-size: 20px;
     font-size: calc(15px + 20 * (100vw / 1280));
     line-height: 65px;
     color: #807C7C;
-   
-    
+
+
 }
 
-#tabs .whiteborder 
-{
+#tabs .whiteborder {
     font-weight: 400;
     //font-size: 35px;
     font-size: calc(15px + 20 * (100vw / 1280));
     line-height: 65px;
-    color: #373535;    
+    color: #373535;
 }
 
-#tabs .tabContent 
-{
+#tabs .tabContent {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3fr 1fr;
 
 
-    .tabContentR
-    {
+    .tabContentR {
         display: grid;
         font-size: 15px;
         color: #373535;
         align-items: center;
     }
 
-    .tabContentL
-    {
+    .tabContentL {
         display: grid;
         grid-template-columns: 1fr 1fr;
         font-size: 15px;
@@ -754,14 +896,14 @@
         align-content: center;
         margin-left: 10px;
     }
-    .tabContentRtext{
+
+    .tabContentRtext {
         font-size: 10px;
         color: #807C7C;
         width: 95%;
     }
 
-    .tabContentLrate
-    {
+    .tabContentLrate {
         display: grid;
         width: 90%;
         grid-template-columns: 0.5fr 2fr 2fr;
@@ -769,42 +911,38 @@
         font-size: 10px;
         color: #807C7C;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         padding-top: 10px;
         max-width: 95%;
     }
 
-    .tabContentLpay
-    {
+    .tabContentLpay {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 1fr;
         font-size: 10px;
         color: #807C7C;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         padding-top: 10px;
         max-width: 95%;
     }
 
     #rangeKreditRate,
     #rangeIpotekaRate,
-    #rangeStrahRate
-    {
+    #rangeStrahRate {
         font-size: 30px;
         color: #F9A123;
     }
 
     #rangeKreditPayment,
     #rangeIpotekaPayment,
-    #rangeStrahPayment
-    {
+    #rangeStrahPayment {
         font-size: 30px;
         color: #4E8A6B;
     }
 
-    .rangekreditpayment_text
-    {
+    .rangekreditpayment_text {
         margin-left: 10%;
     }
 
@@ -834,7 +972,7 @@
     color: #373535;
 }
 
-.range__text{
+.range__text {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -872,7 +1010,8 @@
     border: 0;
     border-radius: 50%;
     background: #f0932b;
-    border: #f9ca24 5px solid; cursor: pointer;
+    border: #f9ca24 5px solid;
+    cursor: pointer;
     -webkit-transition: background .15s ease-in-out;
     transition: background .15s ease-in-out;
 }
@@ -882,38 +1021,37 @@
 }
 
 /* remove border */
-input::-moz-focus-inner, input::-moz-focus-outer {
+input::-moz-focus-inner,
+input::-moz-focus-outer {
     border: 0;
 }
 
-@media screen and (max-width: 767px)
-{
-        .loancalc,
-        .footer 
-            {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            }
+@media screen and (max-width: 767px) {
 
-        #tabs,
-        #tabs .tabContent,
-        #tabs .tabContentL
-        {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-        }
+    .loancalc,
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 
-        #tabs .hide {
-            display: none;
-        }
-        
-        #tabs .show {
-            display: grid;
-        }
+    #tabs,
+    #tabs .tabContent,
+    #tabs .tabContentL {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 
-        
+    #tabs .hide {
+        display: none;
+    }
+
+    #tabs .show {
+        display: grid;
+    }
+
+
 
 }
 
@@ -922,7 +1060,7 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 //******************mobile-bank***********
 
 .mobile-bank {
-    
+
     background-image: url("/assets/mobile/Rectangle\ 130.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -933,31 +1071,38 @@ input::-moz-focus-inner, input::-moz-focus-outer {
     justify-content: space-between;
     align-items: center;
 }
+
 .mobile-bank__content_header {
     font-size: calc(15px + 15 * (100vw / 1280));
     margin-bottom: 25px;
 }
+
 .mobile-bank__content_info {
     border-left: 4px solid #4E8A6B;
     padding-left: 10px;
     font-size: calc(10px + 10 * (100vw / 1280));
-    margin-bottom: 25px ;
+    margin-bottom: 25px;
 }
 
-.download-link{
+.download-link {
     text-decoration: none;
     padding-left: 10px;
 }
+
 @media screen and (max-width: 767px) {
-    .mobile-bank__bank, .mobile-bank__img {
+
+    .mobile-bank__bank,
+    .mobile-bank__img {
         display: none;
     }
 }
+
 @media screen and (min-width: 768px) and (max-width: 930px) {
     .mobile-bank__bank {
         display: none;
     }
 }
+
 //****************end mobile-bank *******
 
 //********************** Footer *********
@@ -978,7 +1123,9 @@ input::-moz-focus-inner, input::-moz-focus-outer {
     .footer_part1 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-    };
+    }
+
+    ;
 
     .footer_part2 {
         display: grid;
@@ -1098,3 +1245,12 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 }
 
 //********************** End Footer *********
+
+.new-page__text {
+    color: #E15601;
+    text-align: center;
+}
+
+.new-page {
+    background: rgba(239, 249, 240, 0.5);
+}

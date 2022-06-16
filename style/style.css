@@ -33,7 +33,6 @@
 .body {
   font-family: 'Nunito', sans-serif;
   max-width: 1440px;
-  min-width: 440px;
 }
 
 /**************** header ***************/
@@ -477,7 +476,6 @@
 /****************** header end **********/
 .currency {
   background-color: #eff9f080;
-  height: 22vh;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -531,6 +529,15 @@
 .select_valute {
   border: none;
   outline: none;
+}
+
+.pay_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 1440px) {
@@ -1048,6 +1055,54 @@ input::-moz-focus-outer {
   #tabs .show {
     display: -ms-grid;
     display: grid;
+  }
+}
+
+.mobile-bank {
+  background-image: url("/assets/mobile/Rectangle 130.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mobile-bank__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-bank__content_header {
+  font-size: calc(15px + 15 * (100vw / 1280));
+  margin-bottom: 25px;
+}
+
+.mobile-bank__content_info {
+  border-left: 4px solid #4E8A6B;
+  padding-left: 10px;
+  font-size: calc(10px + 10 * (100vw / 1280));
+  margin-bottom: 25px;
+}
+
+.download-link {
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-bank__bank,
+  .mobile-bank__img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 930px) {
+  .mobile-bank__bank {
+    display: none;
   }
 }
 

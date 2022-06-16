@@ -41,7 +41,7 @@
 
 .body {
     font-family: 'Nunito', sans-serif;
-    max-width: 1440px;
+    // max-width: 1440px;
     // min-width: 440px;
 
 }
@@ -1107,20 +1107,27 @@ input::-moz-focus-outer {
 
 //********************** Footer *********
 
+.footer-bg {
+    background: rgba(239, 249, 240, 0.5);
+    width: 100%;
+    /*margin-top: 70px;*/
+}
+
 .footer {
-    margin: 0 auto;
-    height: 582px;
-    max-width: 90%;
+
+    margin: 40px auto;
+    margin-bottom: 0px;
+    /* height: 582px;*/
+    /*max-width: 90%;*/
     display: grid;
     grid-template-rows: max-content max-content max-content max-content max-content;
-    background: rgba(239, 249, 240, 0.5);
     font-weight: 300;
     font-size: 15px;
     line-height: 13px;
     padding-top: 70px;
 
-
     .footer_part1 {
+
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }

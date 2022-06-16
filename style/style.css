@@ -628,30 +628,32 @@
   cursor: pointer;
 }
 
+.loancalc {
+  max-width: 95%;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
 #tabs .tab {
   display: inline-block;
   font-weight: 400;
-  font-size: 20px;
+  font-size: calc(15px + 1.5625vw);
   line-height: 65px;
   color: #807C7C;
-  padding-left: 130px;
-  padding-right: 106px;
 }
 
 #tabs .whiteborder {
   font-weight: 400;
-  font-size: 35px;
+  font-size: calc(15px + 1.5625vw);
   line-height: 65px;
   color: #373535;
-  padding-right: 10px;
 }
 
 #tabs .tabContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3fr 1fr;
-  padding-left: 139px;
-  padding-right: 106px;
 }
 #tabs .tabContent .tabContentR {
   display: grid;
@@ -787,18 +789,40 @@ input::-moz-focus-inner, input::-moz-focus-outer {
   border: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .loancalc,
 .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  #tabs,
+#tabs .tabContent,
+#tabs .tabContentL {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  #tabs .hide {
+    display: none;
+  }
+
+  #tabs .show {
+    display: grid;
+  }
+}
+.footer {
+  margin: 0 auto;
   height: 582px;
-  max-width: 95%;
-  grid-area: footer;
+  max-width: 90%;
   display: grid;
   grid-template-rows: max-content max-content max-content max-content max-content;
   background: rgba(239, 249, 240, 0.5);
   font-weight: 300;
   font-size: 15px;
   line-height: 13px;
-  padding-left: 139px;
-  padding-right: 106px;
   padding-top: 70px;
 }
 .footer .footer_part1 {

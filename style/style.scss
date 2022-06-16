@@ -779,8 +779,8 @@
 
 @media screen and (max-width: 992px) {
     .credits__wrapper {
-        max-width: 100%;
-
+        max-width: auto;
+        overflow: hidden;
     }
 
     .credits__info {
@@ -793,6 +793,8 @@
         /*margin-right: -20px;*/
         position: absolute;
         right: -190px;
+
+
     }
 
     .credit__link a {
@@ -815,7 +817,7 @@
 
 @media screen and (max-width: 768px) {
     .credits__wrapper {
-        max-width: 720px;
+        max-width: auto;
     }
 
     .credits__info {
@@ -827,14 +829,18 @@
 
 @media screen and (max-width: 576px) {
     .credits__wrapper {
-        max-width: 540px;
+        max-width: auto;
     }
 
     .credits__img {
-        order: 2;
         /*margin-right: -20px;*/
-        position: absolute;
-        right: -60%;
+        display: none;
+        right: -100%;
+    }
+
+    .credit__links {
+        margin-bottom: 50px;
+
     }
 }
 

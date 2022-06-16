@@ -1,10 +1,3 @@
-/*let menuBtn = document.querySelector('.menu-btn');
-let menu = document.querySelector('.mnu__links');
-P
-menuBtn.addEventListener('click', function(){
-	menuBtn.classList.toggle('active');
-	menu.classList.toggle('active');
-})*/
 
 const hamb = document.querySelector("#hamb");
 const popup = document.querySelector("#popup");
@@ -46,7 +39,6 @@ function closeOnClick() {
   body.classList.remove("noscroll");
 }
 
-
 localStorage.clear(); //для проверки подтягивания города
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -69,9 +61,6 @@ function save() {
 
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(succesCallback, errorCallback);
-    }
-    else{
-
     }
 }
 

@@ -717,19 +717,25 @@
 .credits__wrapper {
   position: relative;
   margin: 0 auto;
-  width: 85%;
+  /*width: 85%;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 10;
+  max-width: 1320px;
+}
+
+.credits img {
+  min-width: 100%;
+  width: 30%;
 }
 
 .credits__name {
-  /*font-size: calc(15px + 20 * (100vw / 1280));*/
+  /* calc(15px + 20 * (100vw / 1280));*/
+  font-size: calc((100vw - 480px)/(1440 - 480) * (35 - 20) + 20px);
   color: #373535;
   font-style: normal;
   font-weight: 400;
-  font-size: 35px;
   line-height: 65px;
   margin-top: 60px;
 }
@@ -743,7 +749,7 @@
 .credit__link a {
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: calc((100vw - 480px)/(1440 - 480) * (20 - 15) + 15px);
   line-height: 46px;
   letter-spacing: 0.035em;
   text-decoration: none;
@@ -753,8 +759,68 @@
 }
 
 .credit__link a:hover {
-  color: #F9A123;
+  color: #E15601;
   border-bottom: 2px solid #4E8A6B;
+}
+
+@media screen and (max-width: 1200px) {
+  .credits__wrapper {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .credits__wrapper {
+    max-width: 100%;
+  }
+  .credits__info {
+    margin-left: 50px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .credits__img {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    /*margin-right: -20px;*/
+    position: absolute;
+    right: -190px;
+  }
+  .credit__link a {
+    /* line-height: 26px;*/
+    color: #373535;
+  }
+  .credits img {
+    min-width: 100%;
+    width: 20%;
+  }
+  .credit__links {
+    margin-bottom: 11rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .credits__wrapper {
+    max-width: 720px;
+  }
+  .credits__info {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .credits__wrapper {
+    max-width: 540px;
+  }
+  .credits__img {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    /*margin-right: -20px;*/
+    position: absolute;
+    right: -60%;
+  }
 }
 
 .loancalc {
@@ -1131,5 +1197,14 @@ input::-moz-focus-outer {
 
 .footer .social-network__img {
   padding-left: 45px;
+}
+
+.new-page__text {
+  color: #E15601;
+  text-align: center;
+}
+
+.new-page {
+  background: rgba(239, 249, 240, 0.5);
 }
 /*# sourceMappingURL=style.css.map */

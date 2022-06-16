@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
 ::-webkit-scrollbar {
   height: 8px;
+  width: 5px;
   /* высота для горизонтального скролла */
   background-color: #EFE4D5;
 }
@@ -15,7 +16,7 @@
   background-color: #E15601;
 }
 
-.container {
+.productsblock, .serviceblock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,7 +55,6 @@
 }
 
 .nav-scroller {
-  width: 109%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,12 +96,14 @@ body {
   font-size: 5ex;
   line-height: 2ex;
   margin-bottom: 2rem;
+  letter-spacing: 0.035em;
 }
 
 .colorful {
   color: #E15601;
   font-weight: 600;
   font-size: 2ex;
+  text-decoration: none;
 }
 
 .grey, .business {
@@ -147,10 +149,6 @@ body {
         -ms-flex-order: 1;
             order: 1;
     margin: 0%;
-  }
-  .container {
-    overflow-x: hidden;
-    padding-left: 0%;
   }
   #img2 {
     -webkit-transform: none;
@@ -205,7 +203,6 @@ body {
 }
 
 .scroller_2 {
-  width: 109%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,6 +235,7 @@ body {
   font-size: 2.5ex;
   line-height: 6ex;
   margin-bottom: -0.5rem;
+  letter-spacing: 0.035em;
 }
 
 #bord {
@@ -270,5 +268,41 @@ body {
 .businessImg4 {
   -webkit-transform: translate(1%, -301%);
           transform: translate(1%, -301%);
+}
+
+.newscontent {
+  margin-top: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 19vh;
+}
+
+.newssection {
+  margin-top: 2%;
+}
+
+.newsblock {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 14px;
+  width: 354px;
+  height: 90px;
+  margin-right: 4%;
+  letter-spacing: 0.035em;
+}
+
+@media (max-width: 450px) {
+  #hiddennews1 {
+    display: none;
+  }
+  #hiddennews2 {
+    display: none;
+  }
 }
 /*# sourceMappingURL=productsStyle.css.map */

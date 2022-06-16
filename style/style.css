@@ -32,7 +32,6 @@
 
 .body {
   font-family: 'Nunito', sans-serif;
-  max-width: 1440px;
 }
 
 /**************** header ***************/
@@ -1107,16 +1106,22 @@ input::-moz-focus-outer {
   }
 }
 
+.footer-bg {
+  background: rgba(239, 249, 240, 0.5);
+  width: 100%;
+  /*margin-top: 70px;*/
+}
+
 .footer {
-  margin: 0 auto;
-  height: 582px;
-  max-width: 90%;
+  margin: 40px auto;
+  margin-bottom: 0px;
+  /* height: 582px;*/
+  /*max-width: 90%;*/
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: max-content max-content max-content max-content max-content;
       grid-template-rows: -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content;
       grid-template-rows: max-content max-content max-content max-content max-content;
-  background: rgba(239, 249, 240, 0.5);
   font-weight: 300;
   font-size: 15px;
   line-height: 13px;

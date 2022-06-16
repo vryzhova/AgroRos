@@ -656,7 +656,6 @@
 }
 
 .main-header {
-  font-family: 'Nunito', sans-serif;
   font-size: calc(15px + 20 * (100vw / 1280));
   color: #373535;
 }
